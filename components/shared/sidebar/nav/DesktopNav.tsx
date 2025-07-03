@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/theme/theme-toggle";
 
 const DesktopNav = () => {
   const paths = useNavigation();
@@ -39,6 +40,7 @@ const DesktopNav = () => {
         </ul>
       </nav>
       <div className="flex flex-col items-center gap-4">
+        <ModeToggle />
         <UserButton />
       </div>
     </Card>
