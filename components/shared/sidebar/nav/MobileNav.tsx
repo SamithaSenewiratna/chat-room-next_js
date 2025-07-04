@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/theme/theme-toggle";
 
 const MobileNav = () => {
   const paths = useNavigation();
@@ -36,6 +37,7 @@ const MobileNav = () => {
               </Tooltip>
             </li>
           ))}
+          <li> <ModeToggle /></li>
           <li className="flex flex-col items-center gap-4">
             <UserButton />
           </li>

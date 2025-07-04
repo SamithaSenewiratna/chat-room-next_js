@@ -1,5 +1,6 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
+import { request } from "http";
 
 export default defineSchema({
   users: defineTable({
@@ -11,7 +12,13 @@ export default defineSchema({
     .index("by_email", ["email"])
     .index("by_clerkId", ["clerkId"]),
 
-  messages: defineTable({
+  requests: defineTable({
+      sender: v.id("users"),
+      receiver: v.id("users"),
+
+  }).index("by_receives",["receiver"]),
+  
+    messages: defineTable({
     body: v.string(),
     author: v.string(), 
     createdAt: v.number(), 
