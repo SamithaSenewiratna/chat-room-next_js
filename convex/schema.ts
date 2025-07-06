@@ -16,8 +16,10 @@ export default defineSchema({
       sender: v.id("users"),
       receiver: v.id("users"),
 
-  }).index("by_receives",["receiver"]),
-  
+  }).index("by_receives",["receiver"])
+    .index("by_receives_sender",["receiver","sender"]),
+   
+
     messages: defineTable({
     body: v.string(),
     author: v.string(), 
