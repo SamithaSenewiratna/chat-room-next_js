@@ -63,7 +63,7 @@ const AddMemberDialog = (props: Props) => {
         </Tooltip.Content>
       </Tooltip.Root>
 
-      {/* ⬇️ Background blur overlay */}
+    
       <DialogOverlay className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40" />
 
       <DialogContent
