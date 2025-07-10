@@ -5,6 +5,6 @@ import { Authenticated, Unauthenticated } from "convex/react";
 import { LogIn } from "lucide-react";
 
 export default function Home() {
-  return null;
+  return ;
 
 }
